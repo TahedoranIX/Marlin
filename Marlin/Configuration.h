@@ -691,12 +691,12 @@
     #define DEFAULT_Ki_LIST {   1.25,   1.25 }
     #define DEFAULT_Kd_LIST {  86.00,  86.00 }
   #else
-    // #define DEFAULT_Kp  21.00
-    // #define DEFAULT_Ki   1.25
-    // #define DEFAULT_Kd  86.00
-    #define DEFAULT_Kp  15.48
-    #define DEFAULT_Ki   0.83
-    #define DEFAULT_Kd  72.3
+    #define DEFAULT_Kp  25.14
+    #define DEFAULT_Ki   2.52
+    #define DEFAULT_Kd  62.83
+    // #define DEFAULT_Kp  15.48
+    // #define DEFAULT_Ki   0.83
+    // #define DEFAULT_Kd  72.3
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -1205,7 +1205,8 @@
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 100 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100.11, 99.63, 401, 95 }
+// #define DEFAULT_AXIS_STEPS_PER_UNIT   { 100.11, 99.63, 401, 475 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 99.36, 98.64, 382, 480 }
 
 
 /**
@@ -1241,7 +1242,7 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION           400    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_ACCELERATION           500    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  1000    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
 
@@ -1693,7 +1694,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true // CAMBIADO
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1738,8 +1739,8 @@
 #define Y_BED_SIZE 220
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-#define X_MIN_POS -5.6
-#define Y_MIN_POS 10
+#define X_MIN_POS -6
+#define Y_MIN_POS -7
 
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
